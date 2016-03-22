@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.jwy.dao.UserInfo" table="tb_userinfo" catalog="db_database24">
+        <id name="number" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native"></generator>
+        </id>
+        <property name="carNumber" type="java.lang.String">
+            <column name="id" length="20" not-null="true">
+                <comment>车牌号码</comment>
+            </column>
+        </property>
+        <property name="upassword" type="java.lang.String">
+            <column name="upassword" length="8" not-null="true">
+                <comment>登录密码</comment>
+            </column>
+        </property>
+        <property name="uquestionId" type="java.lang.String">
+            <column name="uquestionId" length="8" not-null="false">
+                <comment>问题id</comment>
+            </column>
+        </property>
+        <property name="uanswer" type="java.lang.String">
+            <column name="uanswer" length="100" not-null="false">
+                <comment>密保答案</comment>
+            </column>
+        </property>
+        <property name="umoney" type="java.lang.Float">
+            <column name="umoney" length="10" not-null="false">
+                <comment>出生日期</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
